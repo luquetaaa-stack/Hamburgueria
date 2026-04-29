@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*! TODOS OS ELEMENTOS ABAIXO FAZEM PARTE DO HEADER ATÉ QUE O MAIN SEJA COLOCADO*/
+/*? CSS para definir o header*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding-left: 20%;
+    padding-right: 20%;
+    position: fixed;
+}
+
+/*? CSS para definir a logo do header*/
+.logoSemFundo{
+    width: 75px;
+}
+
+/*? CSS para organizar as opções do header*/
+.headerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 55%;
+}
+
+.lang-selector {
+    display: inline-flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    gap: 8px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    user-select: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  }
+
+  .lang-selector:hover {
+    background-color: #4a4a4a;
+    transform: translateY(-1px);
+  }
+
+  .lang-selector img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  }
+
+  .lang-selector span {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    margin-left: 4px;
+    transition: all 0.3s ease;
+  }
+
+  /* DROPDOWN */
+
+  .lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    min-width: 120px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    margin-top: 5px;
+    overflow: hidden;
+  }
+
+  .lang-selector.active .lang-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .lang-selector.active .arrow {
+    transform: rotate(-135deg);
+    margin-top: 2px;
+  }
+
+  .lang-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    gap: 10px;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #4a4a4a;
+  }
+
+  .lang-option:last-child {
+    border-bottom: none;
+  }
+
+  .lang-option:hover {
+    background-color: #4a4a4a;
+  }
+
+  .lang-option.active {
+    background-color: #00d4ff;
+    color: #1a1a1a;
+  }
+
+  .lang-option img {
+    width: 18px;
+    height: 13px;
+    border-radius: 2px;
+  }
+
+  .content {
+    margin-top: 100px;
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  /*! TODOS OS ELEMENTOS ABAIXO FAZEM PARTE DO MAIN ATÉ QUE O .DIVISOR SEJA COLOCADO*/
+  main{
+    width: 100%;
+    height: 600px;
+    background-color: rgb(0, 177, 0);
+  }
+
+  /*! TODOS OS ELEMENTOS ABAIXO FAZEM PARTE DO .DIVISOR ATÉ QUE O FOOTER SEJA COLOCADO*/
+  .divisor{
+    width: 100%;
+    height: 75px;
+    background-color: white;
+  }
+
+  /*! TODOS OS ELEMENTOS ABAIXO FAZEM PARTE DO FOOTER*/
+  footer{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+  }
